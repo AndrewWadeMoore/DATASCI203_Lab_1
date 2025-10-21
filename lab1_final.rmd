@@ -2,13 +2,15 @@
 title: "Trust in the Government by Political Affiliation"
 output: 
   pdf_document:
-    latex_engine: xelatex
+    latex_engine: xelate
 date: "2025-10-19"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+Link to .RMD: https://github.com/AndrewWadeMoore/DATASCI203_Lab_1/blob/main/lab1_final.rmd
 
 # Introduction
 
@@ -38,8 +40,8 @@ library(ggplot2)
 library(rstatix)
 
 # Read csv
-anes <- read.csv("anes_subset.csv") %>% 
-              select (V241227x, V241229) 
+anes <- read.csv("anes_timeseries_2024_csv_20250808.csv") %>%
+              select (V241227x, V241229)
 
 # Keep only relevant responses
 anes <- filter(anes,
